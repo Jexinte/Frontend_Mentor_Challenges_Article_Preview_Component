@@ -1,0 +1,262 @@
+/* MANROPE MEDIUM 500 & BOLD 700  */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+:root {
+
+/* COLORS  */
+
+    --veryDarkGrayishBlue: hsl(217, 19%, 35%);
+    --desaturatedDarkBlue: hsl(214, 17%, 51%);
+    --grayishBlue: hsl(212, 23%, 69%);
+    --lightGrayishBlue: hsl(210, 46%, 95%);
+    --white:white;
+
+/* FONT FAMILY  */
+
+    --manrope : 'Manrope';
+
+ /* FONT WEIGHT  */
+ 
+    --500 : 500;
+    --700 : 700;
+
+ /* FONT SIZE */
+
+    --fSize : 13px;
+
+}
+
+*,::after,::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: var(--manrope);
+    background-color: var(--lightGrayishBlue);
+    font-size: var(--fSize);
+}
+
+.container {
+    display: flex;
+    width: 728px;
+    height: 277px;
+    background: var(--white);
+    border-radius: 10px;
+}
+
+
+.left-side {
+    width: 40%;
+    margin-right: 1em;
+    background-image: url('../images/drawers.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.right-side {
+    padding-left: 1.5em;
+    padding-top: 2.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    position: relative;
+}
+
+.main-paragraph {
+    font-weight: var(--700);
+    color: var(--veryDarkGrayishBlue);
+    font-size: 21px;
+}
+
+.short-content {
+    color:var(--desaturatedDarkBlue);
+    font-weight: 500;
+    line-height: 1.6em;
+}
+
+.author {
+    display: flex;
+}
+
+aside {
+    display: flex;
+    flex-wrap: wrap;
+    gap:1em;
+}
+
+aside img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+}
+
+h2 {
+    font-size: var(--fSize);
+    position: relative;
+    top:1px;
+    font-weight: var(--500);
+}
+
+time {
+    position: relative;
+    top:20px;
+    right:127px;
+    color: var(--grayishBlue);
+}
+
+
+.share {
+    display: block;
+    padding: 1.2em 2.1em;
+    width: 231px;
+    position: absolute;
+    left:255px;
+    bottom: 89px;
+    border-radius: 10px;
+    background-color: var(--veryDarkGrayishBlue);
+     visibility: hidden; 
+    
+}
+.share span {
+    letter-spacing: 5px;
+    position: relative;
+    top:-3px;
+    color:var(--grayishBlue);
+}
+
+.fa-share{
+
+    background-color: var(--lightGrayishBlue);
+    padding:.6em;
+    border-radius: 50px;
+    position: relative;
+    left:7em;
+    top:7px;
+    cursor: pointer;
+}
+
+.icons {
+    padding-right: .8em;
+    cursor: pointer;
+}
+
+#facebook {
+    margin-left: 10px;
+}
+
+
+ .arrow_down {
+    width: 0; 
+    height: 0; 
+    position: absolute;
+    left:107px;
+    top:55px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid var(--veryDarkGrayishBlue);
+     visibility: hidden; 
+   
+  } 
+
+@media screen and (max-width:992px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: 559px;
+        width: 327px;
+    }
+
+    .main-paragraph {
+        font-size: 16px;
+        position: relative;
+        padding-top: .8em;
+        left:10px;
+    }
+
+    .short-content{
+        font-size: 13px;
+        position: relative;
+        left: 10px;
+        width: 20em;
+        }
+    .left-side {
+        width: 100%;
+        height: 219px;
+    }
+
+    .left-side {
+        width: 100%;
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 10px;
+    }
+
+    aside {
+        position:relative;
+        top:17px;
+        left:7px;
+    }
+
+    .share span {
+        color:var(--grayishBlue);
+        position: relative;
+        top:-8px;
+
+    }
+    
+    time {
+        position: relative;
+        top:20px;
+        right:123px;
+    }
+
+    .fa-share {
+        position: relative;
+        left:9px;
+        top:25px;
+        z-index: 1;
+        color:#718095;
+    }
+
+    .fa-share:focus {
+        color:red
+    }
+    
+
+    .arrow_down {
+        display: none;
+    }
+
+    .share {
+        position: absolute;
+        left:0;
+        bottom: -42px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        width:100%;
+        padding: 1.6em 2.1em;
+    }
+
+ 
+
+    .icons {
+        margin-left: .4em;
+        position: relative;
+        left:10px;
+        bottom:3px;
+    }
+}
